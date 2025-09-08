@@ -233,7 +233,7 @@ function updateCartUI() {
     cartTotalEl.textContent = formatRupiah(total);
 
     // WhatsApp link
-    const phone = '6281398991742'; // TODO: replace with real number
+    const phone = '6289607793513'; // TODO: replace with real number
     const lines = cart.map(i => `- ${i.name} x${i.qty} = ${formatRupiah(i.price * i.qty)}`);
     const message = `Halo Harmoni Nusantara,%0ASaya ingin memesan:%0A${lines.join('%0A')}${lines.length ? '%0A' : ''}Total: ${formatRupiah(total)}%0A%0ANama:%0AAlamat:%0AMetode Pembayaran:`;
     whatsappCheckout.href = `https://wa.me/${phone}?text=${message}`;

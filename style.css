@@ -722,6 +722,36 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.6;
 }
 
+/* Partners Section */
+.partners {
+  background: #f9f9f9;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.partners-logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 30px;
+  align-items: center;
+  justify-items: center;
+}
+
+.partner-logo img {
+  max-width: 120px;
+  height: auto;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.partner-logo img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+
 /* Testimonials Section */
 .testimonials {
     padding: 100px 0;
@@ -1006,6 +1036,32 @@ h1, h2, h3, h4, h5, h6 {
 
     .hero-subtitle {
         font-size: 1.1rem;
+    }
+
+    /* Mobile navbar layout: burger left, brand centered, actions right */
+    .nav-container { position: relative; }
+    .hamburger {
+        position: absolute;
+        left: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .nav-brand {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: auto;
+        text-align: center;
+        pointer-events: none;
+    }
+    .nav-brand h1 { pointer-events: auto; }
+    .nav-actions {
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-left: 0;
     }
 
     .about-content {
