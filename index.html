@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harmoni Nusantara - Handmade Indonesian Accessories</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
+
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="icon" href="aset/logo-cinta-nusantara.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>Harmoni Nusantara</h1>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#collections" class="nav-link">Collections</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav-actions">
+                <button class="icon-button" id="search-toggle" aria-label="Search">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+                <button class="icon-button" id="cart-toggle" aria-label="Cart">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 12.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="cart-count" id="cart-count">0</span>
+                </button>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="search-overlay" aria-hidden="true">
+        <div class="search-wrapper">
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Cari produk..." aria-label="Search" />
+                <button class="icon-button close-search" id="search-close" aria-label="Close Search">&times;</button>
+            </div>
+            <div class="search-results" id="search-results"></div>
+        </div>
+    </div>
+
+    <!-- Cart Drawer -->
+    <div class="cart-drawer" id="cart-drawer" aria-hidden="true">
+        <div class="cart-header">
+            <h3>Keranjang</h3>
+            <button class="icon-button" id="cart-close" aria-label="Close Cart">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-footer">
+            <div class="cart-summary">
+                <span>Total</span>
+                <strong id="cart-total">Rp 0</strong>
+            </div>
+            <a id="whatsapp-checkout" class="cta-button checkout" style="text-decoration: none;" href="#" target="_blank" rel="noopener">
+                Checkout via WhatsApp
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Handmade Elegance,<br>Inspired by Indonesia</h1>
+            <p class="hero-subtitle">Each piece is a story, crafted with love and tradition</p>
+            <a href="#collections">
+                <button class="cta-button">Explore Collection</button>
+            </a>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="aset/Desain tanpa judul.png" alt="">
+                </div>
+                <div class="about-text">
+                    <h2 class="section-title-about">Harmoni Nusantara</h2>
+                    <p class="about-description">
+                        Born from a deep appreciation for Indonesian craftsmanship, Harmoni Nusantara celebrates the rich heritage of our archipelago. Each piece in our collection tells a story of tradition, skill, and the timeless beauty found in handmade artistry.
+                    </p>
+                    <p class="about-description">
+                        We work directly with local artisans across Indonesia, ensuring fair trade practices while preserving centuries-old techniques. From intricate batik patterns to delicate jewelry, every item reflects the soul of Indonesian culture.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Owner Story Section -->
+    <section id="owner-story" class="owner-story">
+    <div class="container">
+        <div class="owner-content">
+        
+        <!-- Teks di kiri -->
+        <div class="owner-text">
+            <h2 class="section-title">From the Founder</h2>
+            <p>
+            Harmoni Nusantara was born from a vision to preserve and share the 
+            timeless beauty of Indonesian craftsmanship with the world. 
+            As the founder, I believe every handmade piece carries not only 
+            artistry but also the soul of the artisan who created it.
+            </p>
+            <p>
+            Through this journey, my goal is to empower local artisans, 
+            celebrate cultural heritage, and bring the warmth of Indonesia 
+            into your everyday life.
+            </p>
+        </div>
+        
+        <!-- Foto di kanan -->
+        <div class="owner-image">
+            <img src="aset/owner-cinta-nusantara.JPG" alt="Founder of Harmoni Nusantara">
+        </div>
+        
+        </div>
+    </div>
+    </section>
+
+
+    <!-- Collections Section -->
+    <section id="collections" class="collections">
+        <div class="container">
+            <h2 class="section-title">Our Collections</h2>
+            <p class="section-subtitle">Discover the beauty of Indonesian craftsmanship</p>
+            <div class="collections-slider" id="collections-slider">
+                <button class="slider-btn prev" id="slider-prev" aria-label="Previous">&#10094;</button>
+                <div class="collections-track" id="collections-track">
+                <div class="collection-card" data-name="Handcrafted Jewelry" data-price="350000">
+                    <div class="card-image">
+                        <img src="aset/Desain tanpa judul.png" alt="">
+                        <div class="image-placeholder jewelry"></div>
+                        <div class="card-overlay">
+                            <button class="view-button add-to-cart">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Handcrafted Jewelry</h3>
+                        <div class="card-price">Rp 350.000</div>
+                        <p>Elegant pieces inspired by traditional Indonesian motifs, crafted with precious metals and natural stones.</p>
+                    </div>
+                </div>
+                <div class="collection-card" data-name="Batik Accessories" data-price="250000">
+                    <div class="card-image">
+                        <img src="aset/Desain tanpa judul.png" alt="">
+                        <div class="image-placeholder batik"></div>
+                        <div class="card-overlay">
+                            <button class="view-button add-to-cart">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Batik-Inspired Accessories</h3>
+                        <div class="card-price">Rp 250.000</div>
+                        <p>Modern interpretations of classic batik patterns in scarves, bags, and home decor items.</p>
+                    </div>
+                </div>
+                <div class="collection-card" data-name="Artisanal Crafts" data-price="180000">
+                    <div class="card-image">
+                        <img src="aset/Desain tanpa judul.png" alt="">
+                        <div class="image-placeholder crafts"></div>
+                        <div class="card-overlay">
+                            <button class="view-button add-to-cart">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Artisanal Crafts</h3>
+                        <div class="card-price">Rp 180.000</div>
+                        <p>Unique handmade items that showcase the diverse skills of Indonesian craftspeople.</p>
+                    </div>
+                </div>
+                <div class="collection-card" data-name="Home Decor" data-price="320000">
+                    <div class="card-image">
+                        <img src="aset/Desain tanpa judul.png" alt="">
+                        <div class="image-placeholder home"></div>
+                        <div class="card-overlay">
+                            <button class="view-button add-to-cart">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Home Decor</h3>
+                        <div class="card-price">Rp 320.000</div>
+                        <p>Beautiful decorative pieces that bring Indonesian warmth and elegance to your living space.</p>
+                    </div>
+                </div>
+                <div class="collection-card" data-name="Home Decor" data-price="320000">
+                    <div class="card-image">
+                        <img src="aset/Desain tanpa judul.png" alt="">
+                        <div class="image-placeholder home"></div>
+                        <div class="card-overlay">
+                            <button class="view-button add-to-cart">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Home Decor</h3>
+                        <div class="card-price">Rp 320.000</div>
+                        <p>Beautiful decorative pieces that bring Indonesian warmth and elegance to your living space.</p>
+                    </div>
+                </div>
+                <div class="collection-card" data-name="Home Decor" data-price="320000">
+                    <div class="card-image">
+                        <img src="aset/Desain tanpa judul.png" alt="">
+                        <div class="image-placeholder home"></div>
+                        <div class="card-overlay">
+                            <button class="view-button add-to-cart">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Home Decor</h3>
+                        <div class="card-price">Rp 320.000</div>
+                        <p>Beautiful decorative pieces that bring Indonesian warmth and elegance to your living space.</p>
+                    </div>
+                </div>
+                </div>
+                <button class="slider-btn next" id="slider-next" aria-label="Next">&#10095;</button>
+            </div>
+            <!-- <div class="collections-cta">
+                <button class="cta-button secondary">View All Collections</button>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values">
+        <div class="container">
+            <h2 class="section-title">Our Promise</h2>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>Handmade Quality</h3>
+                    <p>Every piece is carefully crafted by skilled artisans using traditional techniques passed down through generations.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3>Empowering Artisans</h3>
+                    <p>We support local communities by providing fair wages and sustainable income opportunities for Indonesian craftspeople.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                            <polyline points="3.27,6.96 12,12.01 20.73,6.96"/>
+                            <line x1="12" y1="22.08" x2="12" y2="12"/>
+                        </svg>
+                    </div>
+                    <h3>Worldwide Shipping</h3>
+                    <p>We deliver our beautiful pieces worldwide with care and attention, bringing Indonesian artistry to your doorstep.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+                            <line x1="1" y1="10" x2="23" y2="10"/>
+                        </svg>
+                    </div>
+                    <h3>Secure Payment</h3>
+                    <p>Shop with confidence knowing your payment information is protected with industry-standard security measures.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Hear from Our Customers</h2>
+            <p class="section-subtitle">What our customers say about their experience with Harmoni Nusantara</p>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <span>★★★★★</span>
+                        </div>
+                        <p class="testimonial-text">
+                            "The craftsmanship is absolutely stunning! Every piece tells a story of Indonesian heritage. 
+                            I've received so many compliments on my jewelry from Harmoni Nusantara."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>Sarah Johnson</h4>
+                                <span>New York, USA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <span>★★★★★</span>
+                        </div>
+                        <p class="testimonial-text">
+                            "Fast shipping and excellent customer service. The batik scarf I ordered exceeded my expectations. 
+                            Will definitely order again!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>Michael Chen</h4>
+                                <span>Melbourne, Australia</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <span>★★★★★</span>
+                        </div>
+                        <p class="testimonial-text">
+                            "Beautiful home decor pieces that bring warmth to my living room. 
+                            The quality is exceptional and the designs are truly unique."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>Emma Rodriguez</h4>
+                                <span>London, UK</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <span>★★★★★</span>
+                        </div>
+                        <p class="testimonial-text">
+                            "I love supporting fair trade and authentic craftsmanship. 
+                            Harmoni Nusantara makes it easy to own beautiful Indonesian art while supporting local artisans."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>David Kim</h4>
+                                <span>Toronto, Canada</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <span>★★★★★</span>
+                        </div>
+                        <p class="testimonial-text">
+                            "The packaging was beautiful and the product arrived in perfect condition. 
+                            It's clear that every detail is carefully considered at Harmoni Nusantara."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>Lisa Wang</h4>
+                                <span>Singapore</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="stars">
+                            <span>★★★★★</span>
+                        </div>
+                        <p class="testimonial-text">
+                            "Amazing customer service! They helped me choose the perfect gift for my mother. 
+                            The response time was incredible and the product was exactly as described."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>James Thompson</h4>
+                                <span>Dublin, Ireland</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Story Section -->
+<section id="story" class="story">
+  <div class="story-overlay">
+    <div class="container story-content right">
+      <h2 class="section-title-story light">Our Story</h2>
+      <p class="section-subtitle-story light">
+        Every piece of Harmoni Nusantara is more than just handmade — 
+        it carries the heart and soul of our artisans, preserving traditions and 
+        sharing them with the world.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Contact Section -->
+<section id="contact" class="contact-info">
+  <div class="container">
+    <h2 class="section-title">Get in Touch</h2>
+    <p class="section-subtitle">
+      We’d love to hear from you! Reach out for collaborations, orders, or just to say hello.
+    </p>
+
+    <div class="contact-details">
+      <div class="contact-item">
+        <h4><i class="fa-solid fa-envelope"></i>Email</h4>
+        <p>hello@harmoni-nusantara.com</p>
+      </div>
+      <div class="contact-item">
+        <h4><i class="fa-solid fa-phone"></i>Phone</h4>
+        <p>+62 812 3456 7890</p>
+      </div>
+      <div class="contact-item">
+        <h4><i class="fa-solid fa-location-dot"></i>Location</h4>
+        <p>Jl. Nusantara No. 12, Jakarta, Indonesia</p>
+      </div>
+    </div>
+
+    <div class="map-container">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.12345!2d106.84513!3d-6.21462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5!2sJakarta!5e0!3m2!1sen!2sid!4v1234567890" 
+        width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+    <!-- Footer -->
+<footer class="footer">
+  <div class="container footer-content">
+
+    <div class="footer-col">
+      <h3>Harmoni Nusantara</h3>
+      <p>Celebrating Indonesia’s heritage through handmade artistry.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Menu</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#collections">Collections</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Collections</h4>
+      <ul>
+        <li><a href="#collections">Batik</a></li>
+        <li><a href="#collections">Jewelry</a></li>
+        <li><a href="#collections">Accessories</a></li>
+        <li><a href="#collections">Home Decor</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+    <h4>Follow Us</h4>
+    <div class="social-links">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2025 Harmoni Nusantara. All rights reserved.</p>
+  </div>
+</footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
