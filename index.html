@@ -8,8 +8,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
-
-
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     <link rel="icon" href="aset/logo-cinta-nusantara.png">
@@ -18,24 +16,41 @@
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <div class="lang-toggle-mobile" id="lang-toggle-mobile">
+                <select id="language-select-mobile" aria-label="Language">
+                    <option value="id">ID</option>
+                    <option value="en">EN</option>
+                </select>
+            </div>
             <div class="nav-brand">
                 <h1>Harmoni Nusantara</h1>
             </div>
             <ul class="nav-menu" id="nav-menu">
                 <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#home" class="nav-link" data-i18n="nav.home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
+                    <a href="#about" class="nav-link" data-i18n="nav.about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#collections" class="nav-link">Collections</a>
+                    <a href="#collections" class="nav-link" data-i18n="nav.collections">Collections</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
                 </li>
             </ul>
             <div class="nav-actions">
+                <div class="lang-toggle" id="lang-toggle">
+                    <select id="language-select" aria-label="Language">
+                        <option value="id">ID</option>
+                        <option value="en">EN</option>
+                    </select>
+                </div>
                 <button class="icon-button" id="search-toggle" aria-label="Search">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <circle cx="11" cy="11" r="8"></circle>
@@ -51,11 +66,6 @@
                     <span class="cart-count" id="cart-count">0</span>
                 </button>
             </div>
-            <div class="hamburger" id="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
         </div>
     </nav>
 
@@ -63,7 +73,7 @@
     <div class="search-overlay" id="search-overlay" aria-hidden="true">
         <div class="search-wrapper">
             <div class="search-box">
-                <input type="text" id="search-input" placeholder="Cari produk..." aria-label="Search" />
+                <input type="text" id="search-input" placeholder="Cari produk..." aria-label="Search" data-i18n="search.placeholder" />
                 <button class="icon-button close-search" id="search-close" aria-label="Close Search">&times;</button>
             </div>
             <div class="search-results" id="search-results"></div>
@@ -73,16 +83,16 @@
     <!-- Cart Drawer -->
     <div class="cart-drawer" id="cart-drawer" aria-hidden="true">
         <div class="cart-header">
-            <h3>Keranjang</h3>
+            <h3 data-i18n="cart.title">Keranjang</h3>
             <button class="icon-button" id="cart-close" aria-label="Close Cart">&times;</button>
         </div>
         <div class="cart-items" id="cart-items"></div>
         <div class="cart-footer">
             <div class="cart-summary">
-                <span>Total</span>
+                <span data-i18n="cart.total">Total</span>
                 <strong id="cart-total">Rp 0</strong>
             </div>
-            <a id="whatsapp-checkout" class="cta-button checkout" style="text-decoration: none;" href="#" target="_blank" rel="noopener">
+            <a id="whatsapp-checkout" class="cta-button checkout" style="text-decoration: none;" href="#" target="_blank" rel="noopener" data-i18n="cart.checkout">
                 Checkout via WhatsApp
             </a>
         </div>
@@ -94,14 +104,92 @@
             <div class="hero-overlay"></div>
         </div>
         <div class="hero-content">
-            <h1 class="hero-title">Handmade Elegance,<br>Inspired by Indonesia</h1>
-            <p class="hero-subtitle">Each piece is a story, crafted with love and tradition</p>
+            <h1 class="hero-title" data-i18n="hero.title">Handmade Elegance,<br>Inspired by Indonesia</h1>
+            <p class="hero-subtitle" data-i18n="hero.subtitle">Each piece is a story, crafted with love and tradition</p>
             <a href="#collections">
-                <button class="cta-button">Explore Collection</button>
+                <button class="cta-button" data-i18n="cta.button">Explore Collection</button>
             </a>
         </div>
         <div class="scroll-indicator">
             <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="impact" id="impact">
+        <div class="container impact-container">
+            <div class="impact-header">
+                <h2 class="impact-title">Dampak Kami</h2>
+                <p class="impact-subtitle">How we make a positive impact</p>
+            </div>
+
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="impact-icon" aria-hidden="true">
+                        <i class="fa-solid fa-store"></i>
+                    </div>
+                    <!-- <div class="impact-number">450+</div> -->
+                    <div class="impact-desc"> Membuka akses untuk memasarkan karya para pengrajin, baik secara offline ataupun online.</div>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon" aria-hidden="true">
+                        <i class="fa-solid fa-hand-sparkles"></i>
+                    </div>
+                    <!-- <div class="impact-number">120</div> -->
+                    <div class="impact-desc">Meningkatkan keterampilan pengrajin untuk dapat membuat karya berkonsep dasar tradisional,etnik dan unik yang menjadi daya tarik consumen.</div>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon" aria-hidden="true">
+                        <i class="fa-solid fa-sack-dollar"></i>
+                    </div>
+                    <!-- <div class="impact-number">75%</div> -->
+                    <div class="impact-desc"> Meningkatnya kualitas hidup yang didorong dari peningkatan pemasukan. </div>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-icon" aria-hidden="true">
+                        <i class="fa-solid fa-landmark"></i>
+                    </div>
+                    <!-- <div class="impact-number">30+</div> -->
+                    <div class="impact-desc"> Meningkatnya kegiatan pelestarian budaya terutama kepada generasi muda.</div>
+                </div>
+            </div>
+
+            <div class="impact-slider" id="impact-slider">
+                <button class="impact-nav impact-prev" aria-label="Sebelumnya">&#10094;</button>
+                <div class="impact-viewport">
+                    <div class="impact-track">
+                        <div class="impact-slide">
+                            <img src="aset/home-bg.jpg" alt="Fair Trade" class="impact-img">
+                            <div class="impact-caption">
+                                <h3>Fair Trade</h3>
+                                <p>Pembayaran adil dan berkelanjutan untuk perajin lokal.</p>
+                            </div>
+                        </div>
+                        <div class="impact-slide">
+                            <img src="aset/training2.jpg" alt="Pelestarian Budaya" class="impact-img">
+                            <div class="impact-caption">
+                                <h3>Pelestarian Budaya</h3>
+                                <p>Mendokumentasikan dan meneruskan teknik tradisional.</p>
+                            </div>
+                        </div>
+                        <div class="impact-slide">
+                            <img src="aset/ibu_penenun_lurik_logo.jpg" alt="Rantai Pasok Etis" class="impact-img">
+                            <div class="impact-caption">
+                                <h3>Rantai Pasok Etis</h3>
+                                <p>Sumber bahan yang bertanggung jawab dan ramah lingkungan.</p>
+                            </div>
+                        </div>
+                        <div class="impact-slide">
+                            <img src="aset/pak_poniman.jpg" alt="Kualitas Tahan Lama" class="impact-img">
+                            <div class="impact-caption">
+                                <h3>Kualitas Tahan Lama</h3>
+                                <p>Produk dibuat untuk dipakai lama, mengurangi limbah.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="impact-nav impact-next" aria-label="Berikutnya">&#10095;</button>
+            </div>
         </div>
     </section>
 
@@ -113,11 +201,11 @@
                     <img src="aset/about-img.jpg" alt="">
                 </div>
                 <div class="about-text">
-                    <h2 class="section-title-about">Harmoni Nusantara</h2>
-                    <p class="about-description">
+                    <h2 class="section-title-about" data-i18n="about.title">Harmoni Nusantara</h2>
+                    <p class="about-description" data-i18n="about.description1">
                         Born from a deep appreciation for Indonesian craftsmanship, Harmoni Nusantara celebrates the rich heritage of our archipelago. Each piece in our collection tells a story of tradition, skill, and the timeless beauty found in handmade artistry.
                     </p>
-                    <p class="about-description">
+                    <p class="about-description" data-i18n="about.description2">
                         We work directly with local artisans across Indonesia, ensuring fair trade practices while preserving centuries-old techniques. From intricate batik patterns to delicate jewelry, every item reflects the soul of Indonesian culture.
                     </p>
                 </div>
@@ -132,14 +220,14 @@
         
         <!-- Teks di kiri -->
         <div class="owner-text">
-            <h2 class="section-title">From the Founder</h2>
-            <p>
+            <h2 class="section-title" data-i18n="owner.title">From the Founder</h2>
+            <p data-i18n="owner.description1">
             Harmoni Nusantara was born from a vision to preserve and share the 
             timeless beauty of Indonesian craftsmanship with the world. 
             As the founder, I believe every handmade piece carries not only 
             artistry but also the soul of the artisan who created it.
             </p>
-            <p>
+            <p data-i18n="owner.description2">
             Through this journey, my goal is to empower local artisans, 
             celebrate cultural heritage, and bring the warmth of Indonesia 
             into your everyday life.
@@ -159,93 +247,93 @@
     <!-- Collections Section -->
     <section id="collections" class="collections">
         <div class="container">
-            <h2 class="section-title">Our Collections</h2>
-            <p class="section-subtitle">Discover the beauty of Indonesian craftsmanship</p>
+            <h2 class="section-title" data-i18n="collections.title">Our Collections</h2>
+            <p class="section-subtitle" data-i18n="collections.subtitle">Discover the beauty of Indonesian craftsmanship</p>
             <div class="collections-slider" id="collections-slider">
                 <button class="slider-btn prev" id="slider-prev" aria-label="Previous">&#10094;</button>
                 <div class="collections-track" id="collections-track">
-                <div class="collection-card" data-name="Handcrafted Jewelry" data-price="350000">
+                <div class="collection-card" data-name="Asa Cinta" data-price="450000">
                     <div class="card-image">
                         <img src="aset/Desain tanpa judul.png" alt="">
                         <div class="image-placeholder jewelry"></div>
                         <div class="card-overlay">
-                            <button class="view-button add-to-cart">Tambah ke Keranjang</button>
+                            <button class="view-button add-to-cart" data-i18n="button.addToCart">Tambah ke Keranjang</button>
                         </div>
                     </div>
                     <div class="card-content">
-                        <h3>Handcrafted Jewelry</h3>
-                        <div class="card-price">Rp 350.000</div>
-                        <p>Elegant pieces inspired by traditional Indonesian motifs, crafted with precious metals and natural stones.</p>
+                        <h3 data-i18n="col.asacinta.title">Asa Cinta</h3>
+                        <div class="card-price"></div>
+                        <p data-i18n="col.asacinta.desc">Elegant pieces inspired by traditional Indonesian motifs, crafted with precious metals and natural stones.</p>
                     </div>
                 </div>
-                <div class="collection-card" data-name="Batik Accessories" data-price="250000">
+                <div class="collection-card" data-name="Adiningrum" data-price="250000">
                     <div class="card-image">
                         <img src="aset/2.png" alt="">
                         <div class="image-placeholder batik"></div>
                         <div class="card-overlay">
-                            <button class="view-button add-to-cart">Tambah ke Keranjang</button>
+                            <button class="view-button add-to-cart" data-i18n="button.addToCart">Tambah ke Keranjang</button>
                         </div>
                     </div>
                     <div class="card-content">
-                        <h3>Batik-Inspired Accessories</h3>
+                        <h3 data-i18n="col.adiningrum.title">Adiningrum</h3>
                         <div class="card-price">Rp 250.000</div>
-                        <p>Modern interpretations of classic batik patterns in scarves, bags, and home decor items.</p>
+                        <p data-i18n="col.adiningrum.desc">Modern interpretations of classic batik patterns in scarves, bags, and home decor items.</p>
                     </div>
                 </div>
-                <div class="collection-card" data-name="Artisanal Crafts" data-price="180000">
+                <div class="collection-card" data-name="Andhini" data-price="180000">
                     <div class="card-image">
                         <img src="aset/3.png" alt="">
                         <div class="image-placeholder crafts"></div>
                         <div class="card-overlay">
-                            <button class="view-button add-to-cart">Tambah ke Keranjang</button>
+                            <button class="view-button add-to-cart" data-i18n="button.addToCart">Tambah ke Keranjang</button>
                         </div>
                     </div>
                     <div class="card-content">
-                        <h3>Artisanal Crafts</h3>
+                        <h3 data-i18n="col.andhini.title">Andhini</h3>
                         <div class="card-price">Rp 180.000</div>
-                        <p>Unique handmade items that showcase the diverse skills of Indonesian craftspeople.</p>
+                        <p data-i18n="col.andhini.desc">Unique handmade items that showcase the diverse skills of Indonesian craftspeople.</p>
                     </div>
                 </div>
-                <div class="collection-card" data-name="Home Decor" data-price="320000">
+                <div class="collection-card" data-name="Selaras" data-price="320000">
                     <div class="card-image">
                         <img src="aset/4.png" alt="">
                         <div class="image-placeholder home"></div>
                         <div class="card-overlay">
-                            <button class="view-button add-to-cart">Tambah ke Keranjang</button>
+                            <button class="view-button add-to-cart" data-i18n="button.addToCart">Tambah ke Keranjang</button>
                         </div>
                     </div>
                     <div class="card-content">
-                        <h3>Home Decor</h3>
+                        <h3 data-i18n="col.selaras.title">Selaras</h3>
                         <div class="card-price">Rp 320.000</div>
-                        <p>Beautiful decorative pieces that bring Indonesian warmth and elegance to your living space.</p>
+                        <p data-i18n="col.selaras.desc">Beautiful decorative pieces that bring Indonesian warmth and elegance to your living space.</p>
                     </div>
                 </div>
-                <div class="collection-card" data-name="Home Decor" data-price="320000">
+                <div class="collection-card" data-name="Mangun Karsa" data-price="320000">
                     <div class="card-image">
                         <img src="aset/5.png" alt="">
                         <div class="image-placeholder home"></div>
                         <div class="card-overlay">
-                            <button class="view-button add-to-cart">Tambah ke Keranjang</button>
+                            <button class="view-button add-to-cart" data-i18n="button.addToCart">Tambah ke Keranjang</button>
                         </div>
                     </div>
                     <div class="card-content">
-                        <h3>Home Decor</h3>
+                        <h3 data-i18n="col.mangunkarsa.title">Mangun Karsa</h3>
                         <div class="card-price">Rp 320.000</div>
-                        <p>Beautiful decorative pieces that bring Indonesian warmth and elegance to your living space.</p>
+                        <p data-i18n="col.mangunkarsa.desc">Beautiful decorative pieces that bring Indonesian warmth and elegance to your living space.</p>
                     </div>
                 </div>
-                <div class="collection-card" data-name="Home Decor" data-price="320000">
+                <div class="collection-card" data-name="Banyu Biru" data-price="320000">
                     <div class="card-image">
                         <img src="aset/6.png" alt="">
                         <div class="image-placeholder home"></div>
                         <div class="card-overlay">
-                            <button class="view-button add-to-cart">Tambah ke Keranjang</button>
+                            <button class="view-button add-to-cart" data-i18n="button.addToCart">Tambah ke Keranjang</button>
                         </div>
                     </div>
                     <div class="card-content">
-                        <h3>Home Decor</h3>
+                        <h3 data-i18n="col.banyubiru.title">Banyu Biru</h3>
                         <div class="card-price">Rp 320.000</div>
-                        <p>Beautiful decorative pieces that bring Indonesian warmth and elegance to your living space.</p>
+                        <p data-i18n="col.banyubiru.desc">Beautiful decorative pieces that bring Indonesian warmth and elegance to your living space.</p>
                     </div>
                 </div>
                 </div>
@@ -257,10 +345,140 @@
         </div>
     </section>
 
+    <!-- Artikel Section -->
+    <section class="articles-section" id="artikel">
+        <div class="articles-container hidden">
+            <div class="articles-header">
+                <h4 class="articles-title">Artikel</h4>
+                <!-- <p class="articles-subtitle">Temukan tips, strategi, dan inspirasi seputar persiapan masa pensiun, mulai dari keuangan, kesehatan, hingga pengembangan diri.</p> -->
+            </div>
+            
+            <!-- Articles Grid -->
+            <div class="articles-grid" id="articles-grid">
+                <!-- Article 1 -->
+                <div class="article-card" onclick="openArticlePopup(0, event)">
+                    <div class="article-image">
+                        <img src="aset/artikel-1.jpg" alt="Article Image" class="article-img">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-category">Artikel</span>
+                            <span class="article-date">28 Juli 2025</span>
+                        </div>
+                        <p class="article-description">Strategi Keuangan Pensiun yang Berkelanjutan</p>
+                    </div>
+                </div>
+                
+                <!-- Article 2 -->
+                <div class="article-card" onclick="openArticlePopup(1, event)">
+                    <div class="article-image">
+                        <img src="aset/artikel-3.jpg" alt="Article Image" class="article-img">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-category">Artikel</span>
+                            <span class="article-date">28 Juli 2025</span>
+                        </div>
+                        <p class="article-description">Menjadi Pengusaha di Masa Pensiun</p>
+                    </div>
+                </div>
+                
+                <!-- Article 3 -->
+                <div class="article-card" onclick="openArticlePopup(2, event)">
+                    <div class="article-image">
+                        <img src="aset/artikel-4.jpg" alt="Article Image" class="article-img">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-category">Artikel</span>
+                            <span class="article-date">28 Juli 2025</span>
+                        </div>
+                        <p class="article-description">Pentingnya Investasi untuk Pensiun Nyaman</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Hidden Articles -->
+            <div class="articles-grid hidden" id="hidden-articles">
+                <!-- Article 4 -->
+                <div class="article-card" onclick="openArticlePopup(3, event)">
+                    <div class="article-image">
+                        <img src="aset/artikel-2.jpg" alt="Article Image" class="article-img">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-category">Artikel</span>
+                            <span class="article-date">28 Juli 2025</span>
+                        </div>
+                        <p class="article-description">Menjaga Kesehatan Fisik dan Mental di Masa Pensiun</p>
+                    </div>
+                </div>
+                
+                <!-- Article 5 -->
+                <div class="article-card" onclick="openArticlePopup(4, event)">
+                    <div class="article-image">
+                        <img src="aset/artikel-7.jpg" alt="Article Image" class="article-img">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-category">Artikel</span>
+                            <span class="article-date">28 Juli 2025</span>
+                        </div>
+                        <p class="article-description">Mempersiapkan Warisan untuk Keluarga</p>
+                    </div>
+                </div>
+                
+                <!-- Article 6 -->
+                <div class="article-card" onclick="openArticlePopup(5, event)">
+                    <div class="article-image">
+                        <img src="aset/artikel-6.jpg" alt="Article Image" class="article-img">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span class="article-category">Artikel</span>
+                            <span class="article-date">28 Juli 2025</span>
+                        </div>
+                        <p class="article-description">Menghadapi Tantangan Psikologis Pensiun</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- View All Articles Button -->
+            <div class="view-all-container">
+                <button class="view-all-btn" id="view-all-btn" onclick="toggleAllArticles()">
+                    <span class="btn-text">Lihat Semua Artikel</span>
+                    <span class="btn-icon">▼</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Article Popup Modal -->
+<div class="article-popup" id="popup-article">
+  <div class="popup-overlay" onclick="closeArticlePopup()"></div>
+  <div class="popup-content">
+    <button class="popup-close" onclick="closeArticlePopup()">×</button>
+    <div class="popup-hero">
+      <img src="" alt="Article Hero" class="popup-hero-img" id="popup-hero-img">
+    </div>
+    <div class="popup-body">
+      <div class="popup-meta">
+        <span class="popup-category" id="popup-category">Artikel</span>
+        <span class="popup-date" id="popup-date">28 Juli 2025</span>
+      </div>
+      <h2 class="popup-title" id="popup-title">Judul Artikel</h2>
+      <div class="popup-content-text" id="popup-content-text">
+        <p>Konten artikel akan ditampilkan di sini...</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
     <!-- Values Section -->
     <section class="values">
         <div class="container">
-            <h2 class="section-title">Our Promise</h2>
+            <h2 class="section-title" data-i18n="values.title">Our Promise</h2>
             <div class="values-grid">
                 <div class="value-card">
                     <div class="value-icon">
@@ -270,8 +488,8 @@
                             <path d="M2 12l10 5 10-5"/>
                         </svg>
                     </div>
-                    <h3>Handmade Quality</h3>
-                    <p>Every piece is carefully crafted by skilled artisans using traditional techniques passed down through generations.</p>
+                    <h3 data-i18n="values.quality.title">Handmade Quality</h3>
+                    <p data-i18n="values.quality.desc">Every piece is carefully crafted by skilled artisans using traditional techniques passed down through generations.</p>
                 </div>
                 <div class="value-card">
                     <div class="value-icon">
@@ -282,8 +500,8 @@
                             <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
                         </svg>
                     </div>
-                    <h3>Empowering Artisans</h3>
-                    <p>We support local communities by providing fair wages and sustainable income opportunities for Indonesian craftspeople.</p>
+                    <h3 data-i18n="values.artisans.title">Empowering Artisans</h3>
+                    <p data-i18n="values.artisans.desc">We support local communities by providing fair wages and sustainable income opportunities for Indonesian craftspeople.</p>
                 </div>
                 <div class="value-card">
                     <div class="value-icon">
@@ -293,8 +511,8 @@
                             <line x1="12" y1="22.08" x2="12" y2="12"/>
                         </svg>
                     </div>
-                    <h3>Worldwide Shipping</h3>
-                    <p>We deliver our beautiful pieces worldwide with care and attention, bringing Indonesian artistry to your doorstep.</p>
+                    <h3 data-i18n="values.shipping.title">Worldwide Shipping</h3>
+                    <p data-i18n="values.shipping.desc">We deliver our beautiful pieces worldwide with care and attention, bringing Indonesian artistry to your doorstep.</p>
                 </div>
                 <div class="value-card">
                     <div class="value-icon">
@@ -303,8 +521,8 @@
                             <line x1="1" y1="10" x2="23" y2="10"/>
                         </svg>
                     </div>
-                    <h3>Secure Payment</h3>
-                    <p>Shop with confidence knowing your payment information is protected with industry-standard security measures.</p>
+                    <h3 data-i18n="values.payment.title">Secure Payment</h3>
+                    <p data-i18n="values.payment.desc">Shop with confidence knowing your payment information is protected with industry-standard security measures.</p>
                 </div>
             </div>
         </div>
@@ -313,25 +531,69 @@
     <!-- Partners Section -->
 <section id="partners" class="partners">
   <div class="container">
-    <h2 class="section-title">Our Partners</h2>
-    <p class="section-subtitle">
+    <h2 class="section-title" data-i18n="partners.title">Our Partners</h2>
+    <p class="section-subtitle" data-i18n="partners.subtitle">
       Trusted by artisan communities and creative brands across Indonesia.
     </p>
-    <div class="partners-logos">
-      <div class="partner-logo">
-        <img src="aset/kita by inesya.jpeg" alt="Partner 1">
-      </div>
-      <div class="partner-logo">
-        <img src="aset/kita by inesya.jpeg" alt="Partner 2">
-      </div>
-      <div class="partner-logo">
-        <img src="aset/kita by inesya.jpeg" alt="Partner 3">
-      </div>
-      <div class="partner-logo">
-        <img src="aset/kita by inesya.jpeg" alt="Partner 4">
-      </div>
-      <div class="partner-logo">
-        <img src="aset/kita by inesya.jpeg" alt="Partner 5">
+    <div class="partners-container">
+      <div class="partners-track">
+        <!-- First set of logos -->
+        <div class="partner-logo">
+          <img src="aset/kita by inesya.jpeg" alt="Kita by Inesya">
+        </div>
+        <div class="partner-logo">
+          <img src="aset/burobudur silver.png" alt="Borobudur Silver">
+        </div>
+        <div class="partner-logo">
+          <img src="aset/dewan kerajinan nasional daerah.jpg" alt="Dewan Kerajinan Nasional Daerah">
+        </div>
+        <div class="partner-logo">
+          <img src="aset/greenhost butique hotel.png" alt="Greenhost Boutique Hotel">
+        </div>
+        <div class="partner-logo">
+          <img src="aset/laksa idea.png" alt="Laksa Idea">
+        </div>
+        <div class="partner-logo">
+          <img src="aset/palka art craft.png" alt="Palka Art Craft">
+        </div>
+        <div class="partner-logo">
+          <img src="aset/pasar kota gede yogyakarta international airport.jpg" alt="Pasar Kota Gede Yogyakarta">
+        </div>
+        <div class="partner-logo">
+          <img src="aset/armep art tasted-limited-precise.jpg" alt="Armep Art">
+        </div>
+        <div class="partner-logo">
+          <img src="aset/pemda diy.svg" alt="Pemda DIY">
+        </div>
+        
+        <!-- Duplicate set for seamless loop -->
+        <div class="partner-logo">
+          <img src="aset/kita by inesya.jpeg" alt="Kita by Inesya">
+        </div>
+        <div class="partner-logo">
+          <img src="aset/burobudur silver.png" alt="Borobudur Silver">
+        </div>
+        <div class="partner-logo">
+          <img src="aset/dewan kerajinan nasional daerah.jpg" alt="Dewan Kerajinan Nasional Daerah">
+        </div>
+        <div class="partner-logo">
+          <img src="aset/greenhost butique hotel.png" alt="Greenhost Boutique Hotel">
+        </div>
+        <div class="partner-logo">
+          <img src="aset/laksa idea.png" alt="Laksa Idea">
+        </div>
+        <div class="partner-logo">
+          <img src="aset/palka art craft.png" alt="Palka Art Craft">
+        </div>
+        <div class="partner-logo">
+          <img src="aset/pasar kota gede yogyakarta international airport.jpg" alt="Pasar Kota Gede Yogyakarta">
+        </div>
+        <div class="partner-logo">
+          <img src="aset/armep art tasted-limited-precise.jpg" alt="Armep Art">
+        </div>
+        <div class="partner-logo">
+          <img src="aset/pemda diy.svg" alt="Pemda DIY">
+        </div>
       </div>
     </div>
   </div>
@@ -341,8 +603,8 @@
     <!-- Testimonials Section -->
     <section class="testimonials">
         <div class="container">
-            <h2 class="section-title">Hear from Our Customers</h2>
-            <p class="section-subtitle">What our customers say about their experience with Harmoni Nusantara</p>
+            <h2 class="section-title" data-i18n="testimonials.title">Hear from Our Customers</h2>
+            <p class="section-subtitle" data-i18n="testimonials.subtitle">What our customers say about their experience with Harmoni Nusantara</p>
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <div class="testimonial-content">
@@ -459,8 +721,8 @@
 <section id="story" class="story">
   <div class="story-overlay">
     <div class="container story-content right">
-      <h2 class="section-title-story light">Our Story</h2>
-      <p class="section-subtitle-story light">
+      <h2 class="section-title-story light" data-i18n="story.title">Our Story</h2>
+      <p class="section-subtitle-story light" data-i18n="story.subtitle">
         Every piece of Harmoni Nusantara is more than just handmade — 
         it carries the heart and soul of our artisans, preserving traditions and 
         sharing them with the world.
@@ -474,22 +736,22 @@
 <!-- Contact Section -->
 <section id="contact" class="contact-info">
   <div class="container">
-    <h2 class="section-title">Get in Touch</h2>
-    <p class="section-subtitle">
-      We’d love to hear from you! Reach out for collaborations, orders, or just to say hello.
+    <h2 class="section-title" data-i18n="contact.title">Get in Touch</h2>
+    <p class="section-subtitle" data-i18n="contact.subtitle">
+      We'd love to hear from you! Reach out for collaborations, orders, or just to say hello.
     </p>
 
     <div class="contact-details">
       <div class="contact-item">
-        <h4><i class="fa-solid fa-envelope"></i>Email</h4>
+        <h4><i class="fa-solid fa-envelope"></i><span data-i18n="contact.email">Email</span></h4>
         <p>cintanusantara.id@gmail.com</p>
       </div>
       <div class="contact-item">
-        <h4><i class="fa-solid fa-phone"></i>Phone</h4>
+        <h4><i class="fa-solid fa-phone"></i><span data-i18n="contact.phone">Phone</span></h4>
         <p>+62 896 0779 3513</p>
       </div>
       <div class="contact-item">
-        <h4><i class="fa-solid fa-location-dot"></i>Location</h4>
+        <h4><i class="fa-solid fa-location-dot"></i><span data-i18n="contact.location">Location</span></h4>
         <p>Gejawan Wetan RT.02 RW.36, Balecatur, Gamping, Sleman, Yogyakarta 55295</p>
       </div>
     </div>
@@ -510,34 +772,36 @@
 
     <div class="footer-col">
       <h3>Harmoni Nusantara</h3>
-      <p>Celebrating Indonesia’s heritage through handmade artistry.</p>
+      <p data-i18n="footer.brand.desc">From Indonesia with love</p>
     </div>
 
     <div class="footer-col">
-      <h4>Menu</h4>
+      <h4 data-i18n="footer.menu">Menu</h4>
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#collections">Collections</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#home" data-i18n="footer.home">Home</a></li>
+        <li><a href="#about" data-i18n="footer.about">About</a></li>
+        <li><a href="#collections" data-i18n="footer.collections">Collections</a></li>
+        <li><a href="#contact" data-i18n="footer.contact">Contact</a></li>
       </ul>
     </div>
 
     <div class="footer-col">
-      <h4>Collections</h4>
+      <h4 data-i18n="footer.collections">Collections</h4>
       <ul>
-        <li><a href="#collections">Batik</a></li>
-        <li><a href="#collections">Jewelry</a></li>
-        <li><a href="#collections">Accessories</a></li>
-        <li><a href="#collections">Home Decor</a></li>
+        <li><a href="#collections" data-i18n="footer.batik">Batik</a></li>
+        <li><a href="#collections" data-i18n="footer.jewelry">Jewelry</a></li>
+        <li><a href="#collections" data-i18n="footer.accessories">Accessories</a></li>
+        <li><a href="#collections" data-i18n="footer.homeDecor">Home Decor</a></li>
       </ul>
     </div>
 
     <div class="footer-col">
-    <h4>Follow Us</h4>
+    <h4 data-i18n="footer.follow">Follow Us</h4>
     <div class="social-links">
         <a href="https://www.instagram.com/cintanusantara.id?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
         <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
         <a href="https://wa.me/6289607793513" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
     </div>
 
