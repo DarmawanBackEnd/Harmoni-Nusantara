@@ -582,11 +582,11 @@ const translations = {
         'hero.title': 'Keanggunan Buatan Tangan,\nTerinspirasi oleh Indonesia',
         'hero.subtitle': 'Setiap karya adalah kisah, dibuat dengan cinta dan tradisi',
         'cta.button': 'Jelajahi Koleksi',
-        'about.title': 'Harmoni Nusantara',
-        'about.description1': 'Lahir dari apresiasi mendalam terhadap kerajinan Indonesia, Harmoni Nusantara merayakan warisan kaya kepulauan kita. Setiap karya dalam koleksi kami menceritakan kisah tradisi, keterampilan, dan keindahan abadi yang ditemukan dalam seni buatan tangan.',
+        'about.title': 'Harmony Nusantara',
+        'about.description1': 'Lahir dari apresiasi mendalam terhadap kerajinan Indonesia, Harmony Nusantara merayakan warisan kaya kepulauan kita. Setiap karya dalam koleksi kami menceritakan kisah tradisi, keterampilan, dan keindahan abadi yang ditemukan dalam seni buatan tangan.',
         'about.description2': 'Kami bekerja langsung dengan perajin lokal di seluruh Indonesia, memastikan praktik perdagangan yang adil sekaligus melestarikan teknik yang telah berusia berabad-abad. Dari motif batik yang rumit hingga perhiasan yang halus, setiap produk mencerminkan jiwa budaya Indonesia.',
         'owner.title': 'Dari Pendiri',
-        'owner.description1': 'Harmoni Nusantara lahir dari visi untuk melestarikan dan berbagi keindahan abadi kerajinan Indonesia kepada dunia. Sebagai pendiri, saya percaya setiap karya buatan tangan tidak hanya memiliki nilai seni tetapi juga jiwa perajin yang menciptakannya.',
+        'owner.description1': 'Harmony Nusantara lahir dari visi untuk melestarikan dan berbagi keindahan abadi kerajinan Indonesia kepada dunia. Sebagai pendiri, saya percaya setiap karya buatan tangan tidak hanya memiliki nilai seni tetapi juga jiwa perajin yang menciptakannya.',
         'owner.description2': 'Melalui perjalanan ini, tujuan saya adalah memberdayakan perajin lokal, merayakan warisan budaya, dan membawa kehangatan Indonesia ke dalam kehidupan sehari-hari Anda.',
         'values.title': 'Janji Kami',
         'values.quality.title': 'Kualitas Buatan Tangan',
@@ -638,7 +638,8 @@ const translations = {
         'footer.batik': 'Batik',
         'footer.jewelry': 'Perhiasan',
         'footer.accessories': 'Aksesori',
-        'footer.homeDecor': 'Dekorasi Rumah'
+        'footer.homeDecor': 'Dekorasi Rumah',
+        'footer.newsletter': 'Jangan lewatkan penawaran eksklusif, rilis terbaru, dan inspirasi kami. Daftar sekarang!',
     },
     en: {
         'nav.home': 'Home',
@@ -647,11 +648,11 @@ const translations = {
         'nav.contact': 'Contact',
         'hero.title': 'Handmade Elegance,\nInspired by Indonesia',
         'hero.subtitle': 'Each piece is a story, crafted with love and tradition',
-        'about.title': 'Harmoni Nusantara',
-        'about.description1': 'Born from a deep appreciation for Indonesian craftsmanship, Harmoni Nusantara celebrates the rich heritage of our archipelago. Each piece in our collection tells a story of tradition, skill, and the timeless beauty found in handmade artistry.',
+        'about.title': 'Harmony Nusantara',
+        'about.description1': 'Born from a deep appreciation for Indonesian craftsmanship, Harmony Nusantara celebrates the rich heritage of our archipelago. Each piece in our collection tells a story of tradition, skill, and the timeless beauty found in handmade artistry.',
         'about.description2': 'We work directly with local artisans across Indonesia, ensuring fair trade practices while preserving centuries-old techniques. From intricate batik patterns to delicate jewelry, every item reflects the soul of Indonesian culture.',
         'owner.title': 'From the Founder',
-        'owner.description1': 'Harmoni Nusantara was born from a vision to preserve and share the timeless beauty of Indonesian craftsmanship with the world. As the founder, I believe every handmade piece carries not only artistry but also the soul of the artisan who created it.',
+        'owner.description1': 'Harmony Nusantara was born from a vision to preserve and share the timeless beauty of Indonesian craftsmanship with the world. As the founder, I believe every handmade piece carries not only artistry but also the soul of the artisan who created it.',
         'owner.description2': 'Through this journey, my goal is to empower local artisans, celebrate cultural heritage, and bring the warmth of Indonesia into your everyday life.',
         'cta.button': 'Explore Collection',
         'values.title': 'Our Promise',
@@ -686,9 +687,9 @@ const translations = {
         'search.placeholder': 'Search products...',
         'search.add': 'Add',
         'testimonials.title': 'Hear from Our Customers',
-        'testimonials.subtitle': 'What our customers say about their experience with Harmoni Nusantara',
+        'testimonials.subtitle': 'What our customers say about their experience with Harmony Nusantara',
         'story.title': 'Our Story',
-        'story.subtitle': 'Every piece of Harmoni Nusantara is more than just handmade — it carries the heart and soul of our artisans, preserving traditions and sharing them with the world.',
+        'story.subtitle': 'Every piece of Harmony Nusantara is more than just handmade — it carries the heart and soul of our artisans, preserving traditions and sharing them with the world.',
         'contact.title': 'Get in Touch',
         'contact.subtitle': 'We’d love to hear from you! Reach out for collaborations, orders, or just to say hello.',
         'contact.email': 'Email',
@@ -704,7 +705,8 @@ const translations = {
         'footer.batik': 'Batik',
         'footer.jewelry': 'Jewelry',
         'footer.accessories': 'Accessories',
-        'footer.homeDecor': 'Home Decor'
+        'footer.homeDecor': 'Home Decor',
+        'footer.newsletter': 'Don’t miss out on exclusive offers, new releases, and our latest inspiration. Sign up now!',
     }
 };
 
@@ -794,63 +796,66 @@ if (languageSelectMobile) {
 // ===== ARTICLE POPUP FUNCTIONALITY =====
     const articlesData = [
         {
-            title: " Strategi Keuangan Pensiun yang Berkelanjutan",
+            title: " Filosofi Batik dalam Perhiasan Handmade",
             image: "aset/artikel-1.jpg",
             category: "Artikel",
             date: "28 Juli 2025",
             content: `
-                <p>Masa pensiun sering kali menjadi masa di mana pendapatan aktif berhenti, sehingga perencanaan keuangan menjadi lebih penting dari sebelumnya. Langkah pertama adalah memetakan semua sumber pendapatan yang akan Anda miliki, seperti dana pensiun dari perusahaan, tabungan pribadi, hasil investasi, atau penghasilan pasif dari properti dan usaha. Setelah itu, buatlah anggaran bulanan yang realistis dengan memprioritaskan kebutuhan pokok, biaya kesehatan, dan dana darurat. Jangan lupa untuk memperhitungkan inflasi yang dapat menggerus nilai uang di masa depan, serta mempersiapkan dana untuk pengeluaran tak terduga seperti perawatan medis.</p>
-                <p>Selain itu, diversifikasi sumber pendapatan sangat disarankan agar Anda tidak bergantung pada satu sumber saja. Misalnya, kombinasikan dana pensiun dengan investasi pada instrumen berisiko rendah seperti obligasi pemerintah, deposito, atau reksa dana pasar uang. Lakukan evaluasi keuangan secara rutin setiap 6–12 bulan untuk memastikan rencana Anda tetap relevan. Dengan strategi yang terstruktur, masa pensiun bisa dijalani dengan tenang tanpa khawatir kehabisan dana.</p>
+                <p>Batik bukan sekadar motif, melainkan bahasa visual yang penuh makna. Di Harmoni Nusantara, filosofi batik seperti Parang yang melambangkan kekuatan, Kawung yang berarti kesucian, hingga Mega Mendung yang menggambarkan kesabaran, kami terjemahkan ke dalam detail anting, kalung, dan gelang handmade. Setiap perhiasan bukan hanya aksesori, melainkan doa dan simbol nilai luhur budaya Indonesia.</p>
             `
         },
         {
-            title: "Menjadi Pengusaha di Masa Pensiun",
+            title: "Dari Sketsa ke Perhiasan: Proses Kreatif di Harmoni Nusantara",
             image: "aset/artikel-3.jpg",
             category: "Artikel",
             date: "28 Juli 2025",
             content: `
-                <p>Pensiun tidak harus berarti berhenti bekerja total. Justru, ini bisa menjadi kesempatan untuk memulai usaha yang sesuai passion tanpa tekanan seperti saat bekerja penuh waktu. Banyak pensiunan sukses menjalankan bisnis kuliner rumahan, usaha kerajinan, jasa konsultasi, hingga penyewaan properti. Kelebihannya, Anda bisa mengatur jam kerja sesuai kondisi fisik dan tetap merasa produktif. Modal usaha tidak selalu harus besar; yang penting adalah memanfaatkan keterampilan dan jaringan yang sudah dimiliki.</p>
-                <p>Untuk memulai, lakukan riset pasar sederhana agar tahu apa yang dibutuhkan orang di sekitar Anda. Manfaatkan media sosial untuk promosi, karena biayanya minim tetapi jangkauannya luas. Jika memungkinkan, ikut program pelatihan kewirausahaan agar mendapat bimbingan dan jaringan baru. Usaha yang dikelola dengan baik tidak hanya memberi penghasilan tambahan, tetapi juga menjaga semangat hidup di masa pensiun.</p>
+                <p>Setiap karya berawal dari sebuah sketsa. Desainer kami menuangkan inspirasi dari alam dan budaya Indonesia ke atas kertas, lalu pengrajin lokal mengolahnya dengan logam, batu alam, dan kain batik. Hasilnya adalah perhiasan handmade dengan detail unik yang tak bisa ditemukan di tempat lain. Proses ini bukan hanya soal mencipta, tapi juga menjaga tradisi.</p>
             `
         },
         {
-            title: "Pentingnya Investasi untuk Pensiun Nyaman",
+            title: "5 Cara Styling Perhiasan Handmade untuk Sehari-hari",
             image: "aset/artikel-4.jpg",
             category: "Artikel",
             date: "28 Juli 2025",
             content: `
-                <p>Investasi tetap relevan meskipun Anda sudah memasuki masa pensiun. Bedanya, fokus investasi sebaiknya beralih dari pertumbuhan agresif ke perlindungan aset. Instrumen seperti obligasi pemerintah, reksa dana pendapatan tetap, atau properti sewa dapat memberikan penghasilan pasif yang stabil. Jangan lupa untuk menyesuaikan portofolio dengan profil risiko Anda; di masa pensiun, keamanan modal menjadi prioritas utama dibandingkan mengejar keuntungan besar.</p>
-                <p>Selain itu, selalu waspadai tawaran investasi yang menjanjikan keuntungan besar dalam waktu singkat. Banyak pensiunan menjadi target penipuan karena tergiur iming-iming return tinggi. Sebelum berinvestasi, lakukan pengecekan legalitas dan konsultasi dengan perencana keuangan atau pihak berpengalaman. Investasi yang tepat akan membantu menjaga kestabilan keuangan Anda hingga akhir hayat.</p>
+            <p>1. Kalung Batik + Blus Putih → Tampilan simpel tapi tetap elegan.</p>
+            <p>2. Anting Handmade + Dress Polos → Memberi aksen etnik yang anggun.</p>
+            <p>3. Gelang Anyaman + Kemeja Casual → Cocok untuk look santai tapi stylish.</p>
+            <p>4. Layering Kalung → Gabungkan dua kalung handmade untuk look modern.</p>
+            <p>5. Mix Etnik & Modern → Perhiasan batik bisa masuk ke outfit kantor maupun pesta.</p>
             `
         },
         {
-            title: "Menjaga Kesehatan Fisik dan Mental di Masa Pensiun",
+            title: "Hadiah Istimewa dengan Sentuhan Perhiasan Handmade",
             image: "aset/artikel-2.jpg",
             category: "Artikel",
             date: "28 Juli 2025",
             content: `
-                <p>Kesehatan adalah modal utama untuk menikmati masa pensiun. Jaga tubuh tetap bugar dengan olahraga ringan seperti jalan kaki, berenang, atau yoga yang dapat meningkatkan kebugaran tanpa membebani sendi. Perhatikan pola makan sehat dengan memperbanyak sayuran, buah, protein tanpa lemak, dan mengurangi gula serta garam. Pemeriksaan kesehatan rutin juga penting untuk mendeteksi penyakit sejak dini.</p>
-                <p>Kesehatan mental pun tidak boleh diabaikan. Setelah pensiun, beberapa orang merasa kehilangan tujuan atau menjadi kesepian. Aktiflah di komunitas, ikuti kegiatan sosial, atau kembangkan hobi baru. Aktivitas sosial dapat mengurangi risiko depresi dan menjaga otak tetap aktif. Dengan tubuh yang sehat dan pikiran yang positif, masa pensiun akan terasa lebih bermakna.</p>
+                <p> Sebuah hadiah bukan hanya tentang barang, melainkan makna di baliknya. Perhiasan handmade dari Harmoni Nusantara adalah pilihan tepat untuk ulang tahun, pernikahan, hingga hari spesial lainnya. Dengan desain unik dan filosofi budaya, hadiah ini menjadi kenangan berharga yang membawa cerita.</p>
             `
         },
         {
-            title: "Mempersiapkan Warisan untuk Keluarga",
+            title: "Mendukung Pengrajin Lokal Lewat Perhiasan Handmade",
             image: "aset/artikel-7.jpg",
             category: "Artikel",
             date: "28 Juli 2025",
             content: `
-                <p>Warisan adalah salah satu cara untuk memastikan kesejahteraan keluarga setelah Anda tiada. Persiapkan dokumen legal seperti surat wasiat atau akta hibah untuk memastikan pembagian aset berjalan lancar. Tentukan penerima warisan secara jelas dan pastikan mereka memahami prosesnya. Langkah ini penting untuk mencegah konflik keluarga di kemudian hari.</p>
-                <p>Selain aset fisik, pertimbangkan juga untuk meninggalkan asuransi jiwa atau dana investasi yang dapat digunakan keluarga untuk melanjutkan kehidupan mereka. Warisan yang terencana bukan hanya soal harta, tetapi juga meninggalkan rasa aman dan kedamaian bagi orang-orang yang Anda cintai.</p>
+                <p> Membeli produk Harmoni Nusantara berarti ikut menjaga warisan budaya. Kami bekerja langsung dengan pengrajin dari berbagai daerah Indonesia, memastikan mereka mendapatkan penghasilan layak. Setiap pembelian anting, kalung, atau gelang handmade adalah langkah kecil untuk melestarikan keterampilan tradisional dan mendukung ekonomi lokal.</p>
             `
         },
         {
-            title: "Menghadapi Tantangan Psikologis Pensiun",
+            title: "Cara Merawat Perhiasan Handmade agar Tetap Indah",
             image: "aset/artikel-6.jpg",
             category: "Artikel",
             date: "28 Juli 2025",
             content: `
-                <p>Pensiun membawa perubahan besar dalam kehidupan. Perubahan rutinitas dan hilangnya peran profesional bisa memicu stres atau depresi. Untuk mengatasinya, penting memiliki rencana aktivitas harian yang memberi makna, seperti berkebun, belajar hal baru, atau terlibat di kegiatan sosial. Menjaga hubungan dengan teman dan keluarga juga sangat membantu.</p>
-                <p>Jika merasa kesulitan beradaptasi, jangan ragu untuk mencari bantuan profesional seperti psikolog atau konselor. Ingat, masa pensiun adalah kesempatan untuk membangun babak baru yang penuh kebebasan dan pilihan. Dengan sikap positif, Anda bisa menghadapi tantangan psikologis ini dan menjadikannya fase hidup yang memuaskan.</p>
+                <p>Agar perhiasan handmade selalu berkilau, berikut tips yang bisa dilakukan:</p>
+                <p>1. Simpan di tempat kering dan terhindar dari sinar matahari langsung.</p>
+                <p>2. Bersihkan dengan kain lembut setelah digunakan.</p>
+                <p>3. Hindari kontak dengan parfum, lotion, atau air.</p>
+                <p>4. Gunakan pouch khusus agar tidak tergores.</p>
+                <p>Dengan perawatan sederhana, perhiasan dari Harmoni Nusantara akan tetap indah dan awet, menjadi bagian dari cerita hidup Anda.</p>
             `
         }
     ];
